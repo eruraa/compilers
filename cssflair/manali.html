@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manali Trip - DigiDiary</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add these CSS variables */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #34495e;
+            --light-bg: #f8f9f9;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="icon.png" alt="DigiDiary" class="nav-icon">
+            <span class="nav-brand">DigiDiary</span>
+        </div>
+        <div class="nav-right">
+            <a href="profile.html" class="nav-link">Home</a>
+            <div class="dropdown">
+                <a href="#diary" class="nav-link">My Diary ▾</a>
+                <div class="dropdown-content">
+                    <a href="#manali">Manali</a>
+                    <a href="#shimla">Shimla</a>
+                    <a href="#goa">Goa</a>
+                    <a href="#udaipur">Udaipur</a>
+                    <a href="#bengaluru">Bengaluru</a>
+                </div>
+            </div>
+            <a href="#profile" class="nav-link">Profile</a>
+            <a href="index.html" class="nav-link">Logout</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="trip-header">
+            <h1>My Manali Trip</h1>
+        </div>
+        
+        <div class="journey-map">
+            <div class="add-location">
+                <button id="addLocation" class="add-btn">+ Add Location</button>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="day-header">
+
+                </div>
+                <div id="locationsList" class="locations-list">
+                    <!-- Locations will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Location Modal -->
+        <div id="locationModal" class="modal">
+            <div class="modal-content">
+                <h2>Add New Location</h2>
+                <input type="text" id="locationName" placeholder="Location name">
+                <input type="text" id="description" placeholder="Brief description">
+                <input type="file" id="locationImage" accept="image/*">
+                <button id="saveLocation">Save Location</button>
+                <button id="closeModal">Cancel</button>
+            </div>
+        </div>
+
+    <div class="experience-section">
+        <h2>Dear Diary</h2>
+        <div class="experience-container">
+            <textarea id="trip-experience" placeholder="Write about your memorable moments in Manali..."></textarea>
+            <div class="experience-actions">
+                <p>Eshita</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="timeline.js"></script>
+</body>
+</html>
